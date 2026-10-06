@@ -12,8 +12,9 @@ import fb from '../../assets/Photos/🦆 icon _Facebook Messenger_.png';
 
  const Navbar = () => {
   return (
-    <div className="h-10 bg-[#353353] flex flex-col px-3 py-15 w-10  gap-5" >
-     <img src={w}/>
+    <div className=" bg-[#353353] mini-h-screen flex flex-col px-3  w-10  gap-8" >
+     
+     <img src={w} className='py-10'/>
      <img src={ihome}/>
      <img src={iuser}/>
      <img src={ibrief}/>
