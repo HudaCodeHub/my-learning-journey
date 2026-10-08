@@ -1,6 +1,8 @@
-import Me from "./Components/About me/About me"
-import Home from "./Components/Home/Home"
-import Navbar from "./Components/Navbar/Navbar"
+import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Components/Home/Home";
+import Me from "./Components/About me/About me";
+import Services from "./Components/Services/Services";
+
 
 
 function App() {
@@ -9,13 +11,14 @@ function App() {
   return (
     <>
       <div className="flex flex-row gap-2">
-      <Navbar/>
-      <Home/>
+     <Navbar/>
+     <Home/>
     </div>
-   <Me/>
+    <Me/>
+    <Services/>
 
     </>
   )
 }
 
-export default App
+export default App;
