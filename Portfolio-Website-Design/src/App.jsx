@@ -6,6 +6,7 @@ import Experience from "./Components/Experience/Experience";
 import Works from "./Components/Recent works/Recent works";
 import Review from "./Components/Client & Review/Client & Review";
 import Band from "./Components/Band petner/Band petner";
+import Blog from "./Components/Blog/Blog";
 
 
 
@@ -24,6 +25,7 @@ function App() {
     <Works/>
     <Review/>
     <Band/>
+    <Blog/>
     </>
   )
 }
