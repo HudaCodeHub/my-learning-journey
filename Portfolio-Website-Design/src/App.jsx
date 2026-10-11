@@ -3,6 +3,7 @@ import Home from "./Components/Home/Home";
 import Me from "./Components/About me/About me";
 import Services from "./Components/Services/Services";
 import Experience from "./Components/Experience/Experience";
+import Works from "./Components/Recent works/Recent works";
 
 
 
@@ -18,7 +19,7 @@ function App() {
     <Me/>
     <Services/>
     <Experience/>
-
+    <Works/>
     </>
   )
 }
