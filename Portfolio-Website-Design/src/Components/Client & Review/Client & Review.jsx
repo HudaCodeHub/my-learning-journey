@@ -11,7 +11,7 @@ import side from '../../assets/Photos/SIDEBAR.png';
  const Review = () => {
   return (
     <div>
-        <div className="flex flex-row px-16  ">
+        <div className="flex flex-row px-20 ">
             <img src={v} />
             <img src={view} className="w-50 h-10 "/>
         </div>

@@ -5,6 +5,7 @@ import Services from "./Components/Services/Services";
 import Experience from "./Components/Experience/Experience";
 import Works from "./Components/Recent works/Recent works";
 import Review from "./Components/Client & Review/Client & Review";
+import Band from "./Components/Band petner/Band petner";
 
 
 
@@ -22,6 +23,7 @@ function App() {
     <Experience/>
     <Works/>
     <Review/>
+    <Band/>
     </>
   )
 }
