@@ -1,40 +1,47 @@
 import logo from '../../assets/image/logo.png';
+//  import { Link } from "react-router-dom";
+import {Search,Bell,User,ChevronDown} from 'lucide-react';
+import styles from './Header.module.css';
+
 
 function Header() {
+ 
   return (
-    <header>
-        <div>
-            <img src={logo}/>
-           <nav><a href=""> Home</a>
-           <a href=""> Tv Shows</a>
-           <a href="">Movies</a>
-           <a href="">New & Popular</a>
-           <a href="">My List</a>
-           <a href="">Browser by Language</a>
-           </nav>
-       <div>
+    <header className={styles.header}>
+        <div className={styles.container}>
+            <img className={styles} src={logo}  />
+      <nav className={styles.nav}>
+        <a className={styles.navLink} href="">Home</a>
+        <a className={styles.navLink} href="">TV Shows</a>
+        <a className={styles.navLink} href="">Movies</a>
+        <a className={styles.navLink} href="">New & Popular</a>
+        <a className={styles.navLink} href="">My List</a>
+        <a className={styles.navLink} href="">Browse by Language</a>
+      </nav>
+       <div className={styles.rightSection}>
         {/* search */}
-        <div>
-<button> 
-    {/* search button */}
+        <div className={styles.searchContainer}>
+<button className={styles.searchButton}>  
+    <Search />
 </button>
  </div>
  {/* Notfication */}
 
-<button>
-    Notification icon
+<button className={styles.iconButton}>
+    <Bell size={20}/>
 
-<span></span>
+<span className={styles.notificationBadge}>4</span>
 </button>
 
 
 {/* Profile */}
-<div>
-<button>
-{/* user icon */}
-
+<div clasName={styles.profileContainer}>
+<button className={styles.profileButton}>
+  <div className={styles.profileAvatar}>
+<User/>
+</div>
 {/* dropdown icon */}
-
+<ChevronDown size={20}/>
 </button>
 
 </div>
@@ -43,8 +50,11 @@ function Header() {
 
 
         </div></div>
-        </header>
+                 </header>
+
+
   )
 }
 
-export default Header
+
+export default Header;
