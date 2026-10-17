@@ -1,0 +1,101 @@
+.footer {
+  background-color: #141414;
+  color: #757575;
+  padding: 70px 4% 40px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* ---------- Social icons ---------- */
+.social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.socialLink {
+  display: inline-flex;
+  color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+.socialLink:hover {
+  opacity: 0.7;
+}
+
+.socialLink:focus-visible,
+.link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* ---------- Link columns ----------
+   Column-first grid: links fill top to bottom, then move to the next
+   column. Changing the row count changes the number of columns. */
+.links {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto); /* 12 links -> 4 columns */
+  grid-auto-columns: 1fr;
+  column-gap: 16px;
+  row-gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  color: #757575;
+  font-size: 13px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Copyright ---------- */
+.copyright {
+  margin: 28px 0 0;
+  font-size: 11px;
+  color: #757575;
+}
+
+/* ---------- Tablet: 3 columns ---------- */
+@media (max-width: 900px) {
+  .footer {
+    padding: 50px 5% 30px;
+  }
+
+  .links {
+    grid-template-rows: repeat(4, auto);
+  }
+}
+
+/* ---------- Mobile: 2 columns ---------- */
+@media (max-width: 600px) {
+  .footer {
+    padding: 40px 6% 30px;
+  }
+
+  .social {
+    gap: 20px;
+  }
+
+  .links {
+    grid-template-rows: repeat(6, auto);
+    row-gap: 14px;
+  }
+
+  .link {
+    font-size: 12px;
+  }
+}

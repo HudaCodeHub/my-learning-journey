@@ -1,7 +1,8 @@
 import Banner from "./Component/Banner/Banner"
 import DisplayRow from "./Component/DisplayRow/DisplayRow"
+import Footer from "./Component/Footer/Footer"
 import Header from "./Component/Header/Header"
-// import MovieCard from "./Component/MovieCard/MovieCard"
+
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <Header/>
       <Banner/>
       <DisplayRow/>
-      {/* <MovieCard/> */}
+      <Footer/>
    </>
   )
 }
