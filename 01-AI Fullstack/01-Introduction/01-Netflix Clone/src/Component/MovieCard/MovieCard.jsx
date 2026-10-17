@@ -10,7 +10,7 @@ function MovieCard({movie}) {
 
     let geners = ['Adventure', 'Action', 'Thriller']
   return (
-    <div className={styles.cardwrapper}>
+    <div className={styles.cardWrapper}>
         {/* poster image */}
 <img className={styles.poster} src={`${IMAGE_BASE}${movie?.poster_path}`}/>
         {/* hover card */}
