@@ -1,7 +1,7 @@
 .cardWrapper {
     position: relative;
-    width: 290px;
-    height: 198px;
+    width: 100%;
+    height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
     overflow: visible;
@@ -9,9 +9,10 @@
 }
 
 .poster {
-    width: 227px;
-    height: 128px;
+    width: 100%;
+    height: auto;
     border-radius: 6px;
+    aspect-ratio:16/9;
     object-fit: cover;
     transition: transform 0.3s ease;
     position: relative;
