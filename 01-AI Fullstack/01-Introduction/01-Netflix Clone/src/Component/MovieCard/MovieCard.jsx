@@ -3,6 +3,8 @@ import { FaCirclePlay } from "react-icons/fa6";
 import { CiCirclePlus } from "react-icons/ci";
 import { GoCheckCircleFill } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
+ 
+const IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
 function MovieCard({movie}) {
 
@@ -10,11 +12,11 @@ function MovieCard({movie}) {
   return (
     <div className={styles.cardwrapper}>
         {/* poster image */}
-<img src={styles.poster}/>
+<img className={styles.poster} src={`${IMAGE_BASE}${movie?.poster_path}`}/>
         {/* hover card */}
-<div className={styles.hoveCard}>
+<div className={styles.hoverCard}>
 {/* img */}
-<img className={styles.hoverImage} src={movie.poster.path} alt="" />
+<img className={styles.hoverImage} src={`${IMAGE_BASE}${movie?.poster_path} alt={movie?.title || ""}`} />
 
 {/* badge */}
 <div className={styles.badge}>Recently added</div>
@@ -37,17 +39,19 @@ function MovieCard({movie}) {
 {/* geners */}
 
 <div className={styles.geners}>
-{geners?.map((g,index)=>{
-    return (
-    <span key={index}>
-        (g)
-{index<geners.length-1 && <span className={styles.dot}>*</span>}
-
-
+{
+geners.map((g,index)=>{
+    return (<span key={index}>
+        {g}
+{
+index<geners.length -1 && (
+  <span className={styles.dot}>•</span>
+)
+}
     </span>
     );
-    })}
-
+    })
+  }
 </div>
 </div>
   </div>
