@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import ChatHeader from './components/ChatHeader/ChatHeader';
 import MessageList from './components/MessageList/MessageList';
 import ChatInput from './components/ChatInput/ChatInput';
-import './App.css';
+
 
 const API_BASE_URL = 'http://localhost:3000/api';
 
@@ -17,25 +17,25 @@ function App() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  useEffect(() => {
-    fetchConversations();
-  }, []);
+
 
   useEffect(() => {
     scrollToBottom();
   }, [conversations, isLoading]);
 
-  const fetchConversations = async () => {
-    try {
-      const response = await axios.get(`${API_BASE_URL}/chat/conversations`);
-      if (response.data.success) {
-        setConversations(response.data.data.conversations);
+  useEffect(() => {
+    const fetchConversations = async () => {
+      try {
+        const response = await axios.get(`${API_BASE_URL}/chat/conversations`);
+        if (response.data.success) {
+          setConversations(response.data.data.conversations);
+        }
+      } catch (error) {
+        console.error('Error fetching conversations:', error);
       }
-    } catch (error) {
-      console.error('Error fetching conversations:', error);
-    }
-  };
-
+    };
+    fetchConversations();
+  }, []);
   const handleSendMessage = async question => {
     // Optimistically add user message
     const tempUserMessage = {

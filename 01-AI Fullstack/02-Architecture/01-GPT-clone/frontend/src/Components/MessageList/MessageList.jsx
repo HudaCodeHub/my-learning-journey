@@ -1,5 +1,5 @@
 import { Bot } from 'lucide-react';
-import ChatMessage from '../ChatMessage/ChatMessage';
+import ChatMessage from '/src/Components/ChatMessage/ChatMessage.jsx';
 import styles from './MessageList.module.css';
 
 export default function MessageList({
