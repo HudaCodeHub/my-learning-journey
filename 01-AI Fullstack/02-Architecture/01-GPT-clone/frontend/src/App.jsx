@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import Sidebar from './components/Sidebar/Sidebar';
-import ChatHeader from './components/ChatHeader/ChatHeader';
-import MessageList from './components/MessageList/MessageList';
-import ChatInput from './components/ChatInput/ChatInput';
+import Sidebar from './Components/Sidebar/Sidebar';
+import ChatHeader from './Components/ChatHeader/ChatHeader';
+import MessageList from './Components/MessageList/MessageList';
+import ChatInput from './Components/ChatInput/ChatInput';
 
 
 const API_BASE_URL = 'http://localhost:3000/api';
